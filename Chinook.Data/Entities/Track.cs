@@ -16,7 +16,7 @@ namespace Chinook.Data.Entities
     {
         [Key]
         public int TrackId { get; set; }
-        [Required ()]
+        [Required (ErrorMessage ="Track Name is required.")]
         [StringLength(200, ErrorMessage = "Album Title has a maximum of 200 characters")]
         public string Name { get; set; }
         public int? AlbumId { get; set; }
