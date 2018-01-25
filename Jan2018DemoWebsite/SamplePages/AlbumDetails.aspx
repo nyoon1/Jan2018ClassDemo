@@ -115,7 +115,7 @@
     </div>
     <div class="row">
         <asp:Label ID="Label3" runat="server" Text="Total time and size"></asp:Label>&nbsp;&nbsp;
-        <asp:LinkButton ID="Totals" runat="server" >Totals</asp:LinkButton>&nbsp;&nbsp;
+        <asp:LinkButton ID="Totals" runat="server" OnClick="Totals_Click" >Totals</asp:LinkButton>&nbsp;&nbsp;
         <asp:Label ID="Label4" runat="server" Text="Time: "></asp:Label>&nbsp;&nbsp;
         <asp:Label ID="TracksTime" runat="server" ></asp:Label>&nbsp;&nbsp;
         <asp:Label ID="Label7" runat="server" Text="Size: "></asp:Label>&nbsp;&nbsp;
