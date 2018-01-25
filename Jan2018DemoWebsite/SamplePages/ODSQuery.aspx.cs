@@ -22,11 +22,16 @@ namespace Jan2018DemoWebsite.SamplePages
             //gridview.
             //remember, the View Link is a Command Button.
             GridViewRow agvrow = AlbumList.Rows[AlbumList.SelectedIndex];
-
             //access the data from the GridView Template control
             //use the .FindControl("IdControlName") to
             //access the desired control
             string albumid = (agvrow.FindControl("AlbumId") as Label).Text;
+            //send the extracted value to another specified page
+            //pagename?parameterset & oarameters & .....
+            //? prameter set following
+            //Parameter set idlabel = value
+            //&separates multiple sets
+            Response.Redirect("AlbumDetails.aspx?aid=" + albumid);
         }
     }
 }

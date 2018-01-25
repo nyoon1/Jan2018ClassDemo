@@ -7,11 +7,11 @@
             DataSourceID="AlbumListODS" 
             AllowPaging="True" PageSize="15"
             BorderStyle="None" GridLines="Horizontal"
-            CellPadding="5" CellSpacing="0">
+            CellPadding="5" CellSpacing="0" OnSelectedIndexChanged="AlbumList_SelectedIndexChanged">
             <Columns>
                 <asp:TemplateField HeaderText="Id" SortExpression="AlbumId">
                     <ItemTemplate>
-                        <asp:Label runat="server" Text='<%# Eval("AlbumId") %>' ID="Label1"></asp:Label>&nbsp;&nbsp;
+                        <asp:Label runat="server" Text='<%# Eval("AlbumId") %>' ID="AlbumId"></asp:Label>&nbsp;&nbsp;
                     </ItemTemplate>
                 </asp:TemplateField>
 

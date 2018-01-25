@@ -34,5 +34,15 @@ namespace ChinookSystem.BLL
                 return context.Tracks.Find(trackid);
             }
         }
+
+        [DataObjectMethod(DataObjectMethodType.Select, false)]
+        public List<Track> Tracks_GetByAlbumID(int albumid)
+        {
+            //create an transaction instance of your Context class
+            using (var context = new ChinookContext())
+            {
+                return context.Tracks.Where(x => x.AlbumId == albumid).Select(x => x).ToList();
+            }
+        }
     }
 }
